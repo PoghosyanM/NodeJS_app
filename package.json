@@ -1,0 +1,16 @@
+{
+  "name": "nodejs_guide",
+  "version": "1.0.0",
+  "description": "Node.js",
+  "main": "app.js",
+  "repository": "https://github.com/PoghosyanM/NodeJS_app.git",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Mihran <poghosyan.mihran.96@gmail.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
