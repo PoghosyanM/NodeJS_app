@@ -1,7 +1,7 @@
 const http = require("http");
-const routes = require("./routes");
+const express = require("express");
 
-const server = http.createServer(routes.handler);
+const server = http.createServer();
 
 server.listen(5000, null, null, () => {
   console.log("Server is running on port 5000");
