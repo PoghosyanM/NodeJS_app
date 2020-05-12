@@ -4,7 +4,14 @@ const router = express.Router();
 const products = adminData.products;
 
 router.get("/", (req, res, next) => {
-  res.render("shop", { products, pageTitle: "Shop", path: "/" });
+  res.render("handlebars/shop", {
+    products,
+    pageTitle: "Shop",
+    path: "/",
+    hasProducts: products.length > 0,
+    productCSS: true,
+    activeShop: true,
+  });
 });
 
 module.exports = router;
