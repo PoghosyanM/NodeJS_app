@@ -5,15 +5,7 @@ const expressHbs = require("express-handlebars");
 const path = require("path");
 const PORT = 5000;
 
-// app.engine("hbs", expressHbs());
-app.engine(
-  "hbs",
-  expressHbs({
-    defaultLayout: "main-layout",
-    extname: "hbs",
-  })
-);
-app.set("view engine", "hbs");
+app.set("view engine", "ejs");
 app.set("views", "views");
 
 const adminData = require("./routes/admin");
@@ -26,7 +18,7 @@ app.use("/admin", adminData.router);
 app.use(shopRoutes);
 
 app.use((req, res) => {
-  res.status(404).render("handlebars/404", { pageTitle: "Page Not Found" });
+  res.status(404).render("ejs/404", { pageTitle: "Page Not Found" });
 });
 
 app.listen(PORT, () => {
